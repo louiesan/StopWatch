@@ -1,0 +1,200 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #cae7ff;
+  text-shadow: 2px 1px #07fffb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 800;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #ccc;
+  width: 350px;
+  height: 350px;
+  padding: 50px;
+  overflow: hidden;
+  border: 5px solid white;
+  gap: 20px;
+  background-color: black;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+#display {
+  font-family: monospace;
+  font-weight: 800;
+  font-size: 50px;
+  color: white;
+  text-shadow: 1px 1px rgb(44, 248, 255);
+}
+
+#button {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+button {
+  transition: 0.2s ease-in-out all;
+  cursor: pointer;
+  padding: 20px 25px;
+  border-radius: 100%;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  font-family: cursive;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-transition: 0.2s ease-in-out all;
+  -moz-transition: 0.2s ease-in-out all;
+  -ms-transition: 0.2s ease-in-out all;
+  -o-transition: 0.2s ease-in-out all;
+}
+
+div#laps {
+  overflow: scroll;
+  width: 300px;
+  height: 120px;
+  border: 4px solid #00bddd;
+  border-radius: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+p {
+  background-color: black;
+  border-radius: 30px;
+  border: 2px solid #00bddd;
+  font-family: monospace;
+  font-size: 15px;
+  width: 200px;
+  text-align: center;
+  padding: 15px;
+  color: white;
+}
+
+button#start {
+  border: 2px solid rgb(255, 170, 0);
+  background-color: white;
+  color: rgb(255, 170, 0);
+}
+button#stop {
+  border: 2px solid rgb(255, 170, 0);
+  background-color: white;
+  color: rgb(255, 170, 0);
+}
+button#lap {
+  border: 2px solid #ffffff;
+  background-color: #ffcc00;
+  color: #ffffff;
+}
+button#reset {
+  border: 2px solid rgb(71, 255, 249);
+  background-color: black;
+  border-color: white;
+  color: white;
+}
+
+button#start:hover,
+#stop:hover {
+  opacity: 0.8;
+  background-color: black;
+  border-color: white;
+  color: white;
+}
+
+button#reset:hover {
+  background-color: rgb(56, 56, 56);
+  border-color: red;
+  color: red;
+}
+
+/*Media Screen CSS*/
+
+@media (max-width: 500px) and (min-width: 300px) {
+  #container {
+    width: 290px;
+    height: 290px;
+    padding: 10px;
+  }
+
+  #display {
+    font-size: 35px;
+  }
+
+  #button {
+    width: 90%;
+  }
+
+  button {
+    padding: 10px 15px;
+  }
+
+  div#laps {
+    width: 200px;
+    height: 60px;
+  }
+
+  p {
+    width: 140px;
+  }
+  button:hover {
+    background-color: #00bddd;
+    color: #00bddd;
+  }
+  button#lap:active {
+    background-color: #ffffff;
+    border-color: #ffcc00;
+    color: #ffcc00;
+  }
+
+  button#start:active,
+  #stop:active {
+    opacity: 0.8;
+    background-color: black;
+    border-color: white;
+    color: white;
+  }
+
+  button#reset:active {
+    background-color: rgb(56, 56, 56);
+    border-color: red;
+    color: red;
+  }
+
+  button#lap:active {
+    background-color: #ffffff;
+    border-color: #ffcc00;
+    color: #ffcc00;
+  }
+}
